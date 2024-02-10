@@ -10,13 +10,15 @@
 <header>
   <span id="headline">Enjoy complimentary standard shipping on all orders.</span>
   <div class="flexProperty">
-    <h1 id="websitesName">Kanan's Retail Store</h1>
+    <a id="websitesName" href="index.html">Kanan's Retail Store</a>
     <nav id="navPanel">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><span>|</span></li>
-        <li><a href="shop.html">Shop</a></li>
+        <li><a class="pageLinks" href="index.html">Home</a></li>
+        <li><a class="pageLinks" href="about.html">About</a></li>
+        <li><span id="pageAndIconsPipe">|</span></li>
+        <li><img class="headerIcons" src="media/icons/search.svg"/></li>
+        <li><a href="cart.html"><img class="headerIcons" src="media/icons/cart.svg"/></a></li>
+        <li><a href="account.html"><img class="headerIcons" src="media/icons/person.svg"/></a></li>
       </ul>
     </nav>
   </div>
@@ -38,7 +40,7 @@
   </div>
 </main>
 <footer>
-  <form>
+  <form class="contactSubmitForm">
     <input name="name" type="text" class="feedback-input" placeholder="Name"/>
     <input name="email" type="text" class="feedback-input" placeholder="Email"/>
     <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
