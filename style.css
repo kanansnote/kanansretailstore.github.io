@@ -60,6 +60,30 @@ header {
     bottom: 4px;
 }
 
+.search-bar {
+    padding: 10px;
+    margin: 2.8vh -5vh 3vh;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 45vh;
+}
+
+.close-button {
+    padding: 5px;
+    border: none;
+    background: none;
+    position: relative;
+    right: 9px;
+    top: 11px;
+    width: 40px;
+}
+
+.close-icon {
+    width: 30px;
+    height: 30px;
+}
+
 .headerIcons {
     position: relative;
     top: 4.5px;
