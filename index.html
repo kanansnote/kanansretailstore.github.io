@@ -22,17 +22,20 @@
       </ul>
     </nav>
   </div>
-  <div id="">
-    <div></div>
-  </div>
 </header>
 <main>
   <div id="bannerPart">
-    <video></video>
-    <h1>Welcome!</h1>
-    <p>Now taking online orders.</p>
-    <p>Order today and get 20-40% off your first order.</p>
-    <button>Shop Now</button>
+    <div id="videoCarousel">
+      <video class="video-slide" src="media/videos/pexels-kindel-media-6994619 (1080p).mp4" autoplay muted loop></video>
+      <video class="video-slide" src="media/videos/pexels-kindel-media-6994624 (1080p).mp4" autoplay muted loop></video>
+    </div>
+    <div id="ontoCarousel">
+      <span></span>
+      <h1 class="ontoCarouselsBox">Welcome!</h1>
+      <p class="ontoCarouselsBox">Now taking online orders.</p>
+      <p class="ontoCarouselsBox">Order today and get 20-40% off your first order.</p>
+      <button class="ontoCarouselsBox">Shop Now</button>
+    </div>
   </div>
   <div id="productShowcase">
     <h1>Featured Products</h1>
@@ -46,7 +49,7 @@
     <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
     <input type="submit" value="SUBMIT"/>
   </form>
-  <span id="copyright"></span>
+  <div id="copyright"></div>
 </footer>
 <script src="script.js"></script>
 </body>

@@ -60,3 +60,20 @@ function setupSearchIcon() {
 
 // Setup the search icon event listener initially
 setupSearchIcon();
+
+var videos = Array.from(document.querySelectorAll('.video-slide'));
+var currentVideoIndex = 0;
+
+// Initially show the first video
+videos[currentVideoIndex].style.opacity = '1';
+
+setInterval(function() {
+    // Hide the current video
+    videos[currentVideoIndex].style.opacity = '0';
+
+    // Move to the next video
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+
+    // Show the next video
+    videos[currentVideoIndex].style.opacity = '1';
+}, 5000);  // Change videos every 5 seconds
