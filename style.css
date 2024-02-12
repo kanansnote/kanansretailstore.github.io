@@ -51,7 +51,7 @@ header {
 
 #navPanel ul li {
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 .pageLinks, #pageAndIconsPipe {
@@ -60,6 +60,10 @@ header {
     font-size: 1.5rem;
     position: relative;
     bottom: 4px;
+}
+
+.pageLinks.active {
+    border-bottom: solid 2px;
 }
 
 .search-bar {
@@ -91,6 +95,7 @@ header {
     top: 4.5px;
 }
 
+/* index.html */
 #videoCarousel {
     width: 100.75%;
     height: 80vh;
@@ -142,6 +147,7 @@ header {
 footer {
     background-color: black;
     text-align: center;
+    clear: right;
 }
 
 .contactSubmitForm {
@@ -198,4 +204,34 @@ textarea {
 #copyright {
     color: white;
     padding-bottom: 8px;
+}
+
+/* about.html */
+#aboutUs h1 {
+    border-bottom: solid 2px;
+    width: 25%;
+    margin: 3vh 0 0 5vh;
+    padding-top: 1vh;
+}
+
+#aboutUs p {
+    font-size: 24px;
+}
+
+#aboutUs img {
+    position: relative;
+    bottom: 3vh;
+    right: -5px;
+    float: right;
+    width: 50%;
+    height: 89vh;
+    object-fit: cover;
+}
+
+.auSections {
+    margin: 5vh;
+}
+
+#auSection3 p {
+    margin-bottom: unset;
 }

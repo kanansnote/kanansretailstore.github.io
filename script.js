@@ -61,19 +61,40 @@ function setupSearchIcon() {
 // Setup the search icon event listener initially
 setupSearchIcon();
 
+// Initiating video carousel in the Home page
+var videoCarousel = document.querySelector('.videoCarousel')
 var videos = Array.from(document.querySelectorAll('.video-slide'));
 var currentVideoIndex = 0;
 
-// Initially show the first video
-videos[currentVideoIndex].style.opacity = '1';
+if (videoCarousel) {
+  // Initially show the first video
+  videos[currentVideoIndex].style.opacity = "1";
 
-setInterval(function() {
+  setInterval(function () {
     // Hide the current video
-    videos[currentVideoIndex].style.opacity = '0';
+    videos[currentVideoIndex].style.opacity = "0";
 
     // Move to the next video
     currentVideoIndex = (currentVideoIndex + 1) % videos.length;
 
     // Show the next video
-    videos[currentVideoIndex].style.opacity = '1';
-}, 5000);  // Change videos every 5 seconds
+    videos[currentVideoIndex].style.opacity = "1";
+  }, 5000); // Change videos every 5 seconds
+}
+
+// Get the navigation items
+var pageLinks = document.querySelectorAll('.pageLinks');
+
+// Get the current URL
+var currentUrl = window.location.href;
+
+// Loop through the navigation items
+for (var i = 0; i < pageLinks.length; i++) {
+    // Get the href of the navigation item
+    var navItemUrl = pageLinks[i].href;
+
+    // If the navigation item URL matches the current URL, add the 'active' class
+    if (navItemUrl === currentUrl) {
+        pageLinks[i].classList.add('active');
+    }
+}
