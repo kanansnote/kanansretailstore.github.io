@@ -1,3 +1,6 @@
+// Select the body
+var container = document.body;
+
 // Update year in footer tag
 const updateYear = new Date().getFullYear();
 const copyrightElement = document.getElementById("copyright");
@@ -61,6 +64,7 @@ function setupSearchIcon() {
 // Setup the search icon event listener initially
 setupSearchIcon();
 
+
 // Initiating video carousel in the Home page
 var videoCarousel = document.querySelector('.videoCarousel')
 var videos = Array.from(document.querySelectorAll('.video-slide'));
@@ -98,3 +102,42 @@ for (var i = 0; i < pageLinks.length; i++) {
         pageLinks[i].classList.add('active');
     }
 }
+
+// Get the userDropdown element
+var userDropdown = document.querySelector('#userDropdown');
+
+// Create a new div element for the dropdown menu
+var dropdownMenu = document.createElement('div');
+
+// Add some options to the dropdown menu
+var options = ['Sign In', 'Create Account', 'Orders', 'My Account'];  // Add more options as needed
+for (var i = 0; i < options.length; i++) {
+    var option = document.createElement('a');
+    option.href = options[i].toLowerCase().replace(' ', '') + '.html';
+    option.textContent = options[i];
+    dropdownMenu.appendChild(option);
+
+    // Add a divider after 'Create Account'
+    if (options[i] === 'Create Account') {
+        var divider = document.createElement('hr');
+        dropdownMenu.appendChild(divider);
+    }
+}
+
+// Add the dropdown menu to the userDropdown element
+userDropdown.appendChild(dropdownMenu);
+
+// Add an event listener to the userDropdown element to show and hide the dropdown menu when clicked
+userDropdown.addEventListener('click', function() {
+    event.stopPropagation();  // Prevent the document's click event from being triggered
+    if (dropdownMenu.style.display === 'none') {
+        dropdownMenu.style.display = 'block';
+    } else {
+        dropdownMenu.style.display = 'none';
+    }
+});
+
+// Add an event listener to the document to hide the dropdown menu when clicked
+document.addEventListener('click', function() {
+    dropdownMenu.style.display = 'none';
+});
