@@ -1,8 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+:root {
+    --text-color: black;
+    --background-color: white;
+}
+
 body {
     margin: 0;
     padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.dark-mode {
+    --text-color: white;
+    --background-color: black;
+}
+
+#darkModeToggle {
+    border: 2px solid black;
+    color: white;
+    background: black;
 }
 
 main, #headline {
@@ -143,23 +161,53 @@ header {
 
 #ontoCarousel {
     position: absolute;
-    top: 45%;
+    top: 36%;
     left: 2%;
     color: white;
 }
 
+.ontoCarouselsBox {
+    margin-left: 5vh;
+}
+
 #ontoCarousel span {
     border: solid 1px;
-    height: 11em;
+    height: 17em;
     position: absolute;
+    top: -1%;
 }
 
 #ontoCarousel h1 {
     text-transform: uppercase;
+    font-size: 2.5rem;
 }
 
-.ontoCarouselsBox {
-    margin-left: 5vh;
+#ontoCarousel button {
+    width: 180px;
+    border: 2px solid #478974;
+    padding: 6px 24px;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #478974;
+    transition: all 0.45s ease-in-out;
+}
+
+#ontoCarousel button:hover {
+    background-color: #F1F2F2;
+    color: #478974;
+}
+
+#ontoCarousel button:active {
+    background-color: #478974;
+    color: white;
+    box-shadow: none;
+    outline: 5px auto #478974;
+}
+
+#ontoCarousel p {
+    font-size: 1.5rem;
 }
 
 #productShowcase h1 {
@@ -168,6 +216,7 @@ header {
     padding-bottom: 5px;
 }
 
+/* Footer */
 footer {
     background-color: black;
     text-align: center;

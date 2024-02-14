@@ -1,6 +1,11 @@
 // Select the body
 var container = document.body;
 
+//
+document.querySelector('#darkModeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+
 // Update year in footer tag
 const updateYear = new Date().getFullYear();
 const copyrightElement = document.getElementById("copyright");
@@ -108,6 +113,7 @@ var userDropdown = document.querySelector('#userDropdown');
 
 // Create a new div element for the dropdown menu
 var dropdownMenu = document.createElement('div');
+dropdownMenu.style.display = 'none';  // Set the initial display style to 'none'
 
 // Add some options to the dropdown menu
 var options = ['Sign In', 'Create Account', 'Orders', 'My Account'];  // Add more options as needed
