@@ -1,8 +1,6 @@
-// Select the body
-var container = document.body;
-
-//
-document.querySelector('#darkModeToggle').addEventListener('click', function() {
+// Implement light/dark mode switch
+var darkModeToggle = document.querySelector('#darkModeToggle');
+darkModeToggle.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 });
 
@@ -146,4 +144,29 @@ userDropdown.addEventListener('click', function() {
 // Add an event listener to the document to hide the dropdown menu when clicked
 document.addEventListener('click', function() {
     dropdownMenu.style.display = 'none';
+});
+
+// Create burger menu
+const burgerMenu = document.querySelector(".burger-menu");
+
+window.onload = function() {
+    navPanel.style.display = 'none';
+};
+
+burgerMenu.addEventListener("click", () => {
+    if (window.innerWidth <= 775) {
+        navPanel.style.display = navPanel.style.display === "none" ? "flex" : "none";
+    }
+
+    for (var i = 0; i < pageLinks.length; i++) {
+        pageLinks[i].classList.remove("active");
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 775) {
+        navPanel.style.display = 'flex';
+    } else {
+        navPanel.style.display = 'none';
+    }
 });

@@ -18,9 +18,15 @@ body {
 }
 
 #darkModeToggle {
-    border: 2px solid black;
+    border: none;
     color: white;
-    background: black;
+    background: none;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    font-size: 1.5rem;
 }
 
 main, #headline {
@@ -311,7 +317,70 @@ textarea {
 
 @media only screen and (max-width: 775px) {
 
-    #navPanel {
+    #websitesName {
+        margin: 9px 0 10px 15px;
+        z-index: 7;
+    }
 
+    #navPanel {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -4vh;
+        width: 32vh;
+        height: 77.2vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 6;
+    }
+
+    #navPanel ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 12vh;
+    }
+
+    #navPanel ul li {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid;
+    }
+
+    #navPanel a, #userDropdown, .search-container, #darkModeToggle {
+        display: flex;
+        padding: 10px 16.5px;
+        color: white;
+        cursor: pointer; /* Cursor style */
+    }
+
+    .pageLinks {
+        border-color: 2px #478974;
+    }
+
+    .pageLinks.active {
+        display: none;
+    }
+
+    #pageAndIconsPipe {
+        display: none;
+    }
+
+    #userDropdown, .search-container {
+        flex-direction: row;
+    }
+
+    .burger-menu {
+        position: absolute;
+        top: 10px;
+        right: 3vh;
+        cursor: pointer;
+        z-index: 7;
+    }
+
+    .burger-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 7px 0;
+        transition: all 0.3s ease;
     }
 }
