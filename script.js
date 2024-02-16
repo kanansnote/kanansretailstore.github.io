@@ -1,7 +1,15 @@
-// Implement light/dark mode switch
+// Implement light/dark mode switch with replacing images
 var darkModeToggle = document.querySelector('#darkModeToggle');
+var darkModeImage = document.querySelector('#darkModeImg');
+
 darkModeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
+    var darkMode = document.body.classList.toggle('dark-mode');
+
+    if (darkMode) {
+        darkModeImage.src = "media/icons/moon.svg";
+    } else {
+        darkModeImage.src = "media/icons/sunny.svg";
+    }
 });
 
 // Update year in footer tag
@@ -150,7 +158,9 @@ document.addEventListener('click', function() {
 const burgerMenu = document.querySelector(".burger-menu");
 
 window.onload = function() {
-    navPanel.style.display = 'none';
+    if (window.innerWidth <= 775) {
+        navPanel.style.display = 'none';
+    }
 };
 
 burgerMenu.addEventListener("click", () => {
