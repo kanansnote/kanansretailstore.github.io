@@ -3,6 +3,10 @@
 :root {
     --text-color: black;
     --background-color: white;
+
+    #aboutUs h1, #productsContainer h1 {
+        --border-bottom: 1px solid white;
+   }
 }
 
 body {
@@ -15,6 +19,10 @@ body {
 .dark-mode {
     --text-color: white;
     --background-color: black;
+
+    #aboutUs h1, #productsContainer h1 {
+        border-bottom: var(--border-bottom);
+    }
 }
 
 #darkModeToggle {
@@ -152,7 +160,7 @@ header {
 }
 
 #bannerPart {
-
+    height: 28em;
 }
 
 .video-slide {
@@ -214,10 +222,67 @@ header {
     font-size: 1.5rem;
 }
 
-#productShowcase h1 {
+#productsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#productsContainer h1 {
     border-bottom: solid 1px black;
-    width: 100%;
     padding-bottom: 5px;
+    margin: 5vh;
+}
+
+.leftArrow, .rightArrow {
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Position arrows outside the carousel */
+    top: 140%;
+    transform: translateY(-50%); /* Center arrows vertically */
+    z-index: 15;
+}
+
+.leftArrow {
+    left: 1%;
+}
+
+.rightArrow {
+    right: 1%;
+}
+
+#productsSlides {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.productsSlide {
+    width: calc(100% / 4); /* Assuming 3 products per slide */
+    flex-shrink: 0; /* Prevent slides from shrinking when there's extra space */
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding/border in width calculation */
+}
+
+.productsSlide img {
+    max-width: 80%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.productsPrice span {
+    margin-right: 2vh;
+    text-decoration: line-through;
+    color: grey;
+}
+
+#allProductsLink {
+    text-decoration: none;
+    text-align: center;
+    color: #478974;
+    font-size: 1.25rem;
+    margin-top: 1vh;
 }
 
 /* Footer */

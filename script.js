@@ -97,6 +97,53 @@ if (videoCarousel) {
   }, 5000); // Change videos every 5 seconds
 }
 
+function productSlider() {
+  // Get references to carousel container, slide container, and slides
+  const carouselContainer = document.querySelector('#productsContainer');
+  const slideContainer = carouselContainer.querySelector('#productsSlides');
+  const slides = slideContainer.querySelectorAll('.productsSlide');
+
+  // Calculate single slide width
+  const singleSlideWidth = carouselContainer.offsetWidth / slides.length;
+
+  // Set initial current slide index and translateX value
+  let currentSlideIndex = 0;
+  slideContainer.style.transform = `translateX(0px)`;
+
+  // Optional: Add event listeners for arrow buttons (if present)
+  if (carouselContainer.querySelectorAll('.leftArrow, .rightArrow').length > 0) {
+    const leftArrow = carouselContainer.querySelector('.leftArrow');
+    const rightArrow = carouselContainer.querySelector('.rightArrow');
+
+    leftArrow.addEventListener('click', () => {
+      slideLeft();
+    });
+
+    rightArrow.addEventListener('click', () => {
+      slideRight();
+    });
+  }
+
+  // Function to slide left
+  function slideLeft() {
+    if (currentSlideIndex === 0) return; // Prevent sliding beyond first slide
+
+    currentSlideIndex++;
+    slideContainer.style.transform = `translateX(${currentSlideIndex * singleSlideWidth}px)`;
+  }
+
+  // Function to slide right
+  function slideRight() {
+    if (currentSlideIndex === slides.length - 1) return; // Prevent sliding beyond last slide
+
+    currentSlideIndex--;
+    slideContainer.style.transform = `translateX(${currentSlideIndex * singleSlideWidth}px)`;
+  }
+}
+
+productSlider(); // Call the productSlider function to initialize the carousel
+
+
 // Get the navigation items
 var pageLinks = document.querySelectorAll('.pageLinks');
 
