@@ -1,14 +1,28 @@
 // Implement light/dark mode switch with replacing images
 var darkModeToggle = document.querySelector('#darkModeToggle');
-var darkModeImage = document.querySelector('#darkModeImg');
+var bothModeIcons = document.querySelector('#bothModeIcons');
+
+// Check if dark mode was enabled in a previous session
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    bothModeIcons.src = 'media/icons/moon.svg';
+} else {
+    bothModeIcons.src = 'media/icons/sunny.svg';
+}
+
+// Display the image once the correct source has been set
+bothModeIcons.style.display = 'inline-block';
 
 darkModeToggle.addEventListener('click', function() {
-    var darkMode = document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('dark-mode');
 
-    if (darkMode) {
-        darkModeImage.src = "media/icons/moon.svg";
+    // Save the dark mode setting in localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+        bothModeIcons.src = 'media/icons/moon.svg';
     } else {
-        darkModeImage.src = "media/icons/sunny.svg";
+        localStorage.setItem('darkMode', 'disabled');
+        bothModeIcons.src = 'media/icons/sunny.svg';
     }
 });
 
@@ -97,23 +111,24 @@ if (videoCarousel) {
   }, 5000); // Change videos every 5 seconds
 }
 
+const productsContainer = document.querySelector('#productsContainer');
+
 function productSlider() {
-  // Get references to carousel container, slide container, and slides
-  const carouselContainer = document.querySelector('#productsContainer');
-  const slideContainer = carouselContainer.querySelector('#productsSlides');
+  // Get references to products' container, slide container, and slides
+  const slideContainer = productsContainer.querySelector('#productsSlides');
   const slides = slideContainer.querySelectorAll('.productsSlide');
 
   // Calculate single slide width
-  const singleSlideWidth = carouselContainer.offsetWidth / slides.length;
+  const singleSlideWidth = productsContainer.offsetWidth / slides.length;
 
   // Set initial current slide index and translateX value
   let currentSlideIndex = 0;
   slideContainer.style.transform = `translateX(0px)`;
 
   // Optional: Add event listeners for arrow buttons (if present)
-  if (carouselContainer.querySelectorAll('.leftArrow, .rightArrow').length > 0) {
-    const leftArrow = carouselContainer.querySelector('.leftArrow');
-    const rightArrow = carouselContainer.querySelector('.rightArrow');
+  if (productsContainer.querySelectorAll('.leftArrow, .rightArrow').length > 0) {
+    const leftArrow = productsContainer.querySelector('.leftArrow');
+    const rightArrow = productsContainer.querySelector('.rightArrow');
 
     leftArrow.addEventListener('click', () => {
       slideLeft();
@@ -141,8 +156,9 @@ function productSlider() {
   }
 }
 
-productSlider(); // Call the productSlider function to initialize the carousel
-
+if (productsContainer) {
+    productSlider(); // Call the productSlider function to initialize the carousel
+}
 
 // Get the navigation items
 var pageLinks = document.querySelectorAll('.pageLinks');

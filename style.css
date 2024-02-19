@@ -5,8 +5,8 @@
     --background-color: white;
 
     #aboutUs h1, #productsContainer h1 {
-        --border-bottom: 1px solid white;
-   }
+        --border-bottom: 1px solid black;
+    }
 }
 
 body {
@@ -14,14 +14,19 @@ body {
     padding: 0;
     color: var(--text-color);
     background-color: var(--background-color);
+
+    #aboutUs h1, #productsContainer h1 {
+        border-bottom: var(--border-bottom);
+    }
 }
 
 .dark-mode {
     --text-color: white;
     --background-color: black;
+    --border-bottom: white;
 
     #aboutUs h1, #productsContainer h1 {
-        border-bottom: var(--border-bottom);
+        --border-bottom: 1px solid white;
     }
 }
 
@@ -147,6 +152,10 @@ header {
     border: none;
     border-top: 1px solid white;
     width: 8.75em;
+}
+
+#bothModeIcons {
+    display: none;
 }
 
 /* index.html */
