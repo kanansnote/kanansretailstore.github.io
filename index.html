@@ -18,13 +18,13 @@
     </div>
     <nav id="navPanel">
       <ul>
-        <li><a class="pageLinks" href="index.html">Home</a></li>
-        <li><a class="pageLinks" href="about.html">About</a></li>
-        <li><span id="pageAndIconsPipe">|</span></li>
-        <li><div class="search-container"><img class="headerIcons" src="media/icons/search.svg"/></div></li>
-        <li><a href="cart.html"><img class="headerIcons" src="media/icons/cart.svg"/></a></li>
-        <li><div id="userDropdown"><img class="headerIcons" src="media/icons/person.svg"/></div></li>
-        <li><button id="darkModeToggle"><img id="bothModeIcons" class="headerIcons" src="media/icons/sunny.svg"/></button></li>
+        <li><a class="pageLinks navPanelElements" href="index.html">Home</a></li>
+        <li><a class="pageLinks navPanelElements" href="about.html">About</a></li>
+        <li><span id="pageAndIconsPipe" class="navPanelElements">|</span></li>
+        <li><div class="search-container navPanelElements"><img class="headerIcons" src="media/icons/search.svg"/></div></li>
+        <li><a class="navPanelElements" href="cart.html"><img class="headerIcons" src="media/icons/cart.svg"/></a></li>
+        <li><div id="userDropdown" class="navPanelElements"><img class="headerIcons" src="media/icons/person.svg"/></div></li>
+        <li><button id="darkModeToggle" class="navPanelElements"><img id="bothModeIcons" class="headerIcons" src="media/icons/sunny.svg"/></button></li>
       </ul>
     </nav>
   </div>
@@ -40,7 +40,7 @@
       <h1 class="ontoCarouselsBox">Welcome!</h1>
       <p class="ontoCarouselsBox">Now taking online orders.</p>
       <p class="ontoCarouselsBox">Order today and get 20-40% off your first order.</p>
-      <button class="ontoCarouselsBox">Shop Now</button>
+      <button class="ontoCarouselsBox someButtonsStyles">Shop Now</button>
     </div>
   </div>
   <div id="productsContainer">
@@ -77,12 +77,20 @@
   </div>
 </main>
 <footer>
+  <h1>Questions or Concerns?</h1>
+  <p>Need help selecting a product or finding a sustainable option? Send us a message!</p>
+  <button id="dropLine" class="someButtonsStyles">Drop us a line!</button>
   <form class="contactSubmitForm">
     <input name="name" type="text" class="feedback-input" placeholder="Name"/>
     <input name="email" type="text" class="feedback-input" placeholder="Email"/>
     <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
     <input type="submit" value="SUBMIT"/>
   </form>
+  <div id="mailingList">
+    <h1>Join Our Mailing List</h1>
+    <input id="mailingListInput" type="text" placeholder="Email">
+    <button id="mailingListButton" class="someButtonsStyles">Sign Up</button>
+  </div>
   <div id="copyright"></div>
 </footer>
 <script src="script.js"></script>

@@ -229,6 +229,7 @@ window.onload = function() {
 burgerMenu.addEventListener("click", () => {
     if (window.innerWidth <= 775) {
         navPanel.style.display = navPanel.style.display === "none" ? "flex" : "none";
+        navPanel.style.justifyContent = 'center';
     }
 
     for (var i = 0; i < pageLinks.length; i++) {
@@ -241,5 +242,19 @@ window.addEventListener('resize', () => {
         navPanel.style.display = 'flex';
     } else {
         navPanel.style.display = 'none';
+    }
+});
+
+// Actions on contact submit form
+var dropLine = document.getElementById('dropLine');
+var contactSubmitForm = document.querySelector('.contactSubmitForm');
+
+contactSubmitForm.style.display = 'none';
+
+dropLine.addEventListener('click', function() {
+    event.stopPropagation();  // Prevent the document's click event from being triggered
+    if (contactSubmitForm.style.display === 'none') {
+        contactSubmitForm.style.display = 'block';
+
     }
 });

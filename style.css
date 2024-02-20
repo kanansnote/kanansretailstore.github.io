@@ -49,6 +49,8 @@ header {
     background-color: rgb(48 32 32 / 50%);
     color: white;
     z-index: 5;
+    position: sticky;
+    top: 0;
 }
 
 #headline {
@@ -64,7 +66,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 #websitesName {
@@ -203,8 +204,8 @@ header {
     font-size: 2.5rem;
 }
 
-#ontoCarousel button {
-    width: 180px;
+.someButtonsStyles {
+    width: fit-content;
     border: 2px solid #478974;
     padding: 6px 24px;
     font-size: 1.15em;
@@ -215,12 +216,12 @@ header {
     transition: all 0.45s ease-in-out;
 }
 
-#ontoCarousel button:hover {
+.someButtonsStyles:hover {
     background-color: #F1F2F2;
     color: #478974;
 }
 
-#ontoCarousel button:active {
+.someButtonsStyles:active {
     background-color: #478974;
     color: white;
     box-shadow: none;
@@ -324,7 +325,7 @@ footer {
 }
 
 .feedback-input:focus {
-    border: 2px solid #cc4949;
+    border: 2px solid #478974;
 }
 
 textarea {
@@ -352,9 +353,15 @@ textarea {
     background: #385959;
 }
 
+#mailingListInput {
+    padding: 10px;
+    background: none;
+    border: 1px solid white;
+}
+
 #copyright {
     color: white;
-    padding-bottom: 8px;
+    margin-top: 18px;
 }
 
 /* about.html */
@@ -387,7 +394,38 @@ textarea {
     margin-bottom: unset;
 }
 
+/* createaccount.html */
+
+#createAccount {
+    margin: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#createAccount h1 {
+    border-bottom: 1px solid white;
+    justify-content: unset;
+}
+
+#createAccount input {
+    background: none;
+    padding: 15px;
+    width: 500px;
+    border: 1px solid white;
+}
+
+#createAccount p {
+    font-size: 20px;
+}
+
+/* Media query */
 @media only screen and (max-width: 775px) {
+
+    header {
+        bottom: 15vh;
+    }
 
     #websitesName {
         margin: 9px 0 10px 15px;
@@ -398,9 +436,9 @@ textarea {
         display: none;
         position: absolute;
         top: 0;
-        right: -4vh;
-        width: 32vh;
-        height: 77.2vh;
+        right: -2vh;
+        width: 100%;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
         z-index: 6;
     }
@@ -415,17 +453,20 @@ textarea {
         margin-bottom: 10px;
         display: block;
         border-bottom: 2px solid;
+        width: 10em;
     }
 
-    #navPanel a, #userDropdown, .search-container, #darkModeToggle {
+    .navPanelElements {
         display: flex;
+        justify-content: center;
         padding: 10px 16.5px;
         color: white;
         cursor: pointer; /* Cursor style */
     }
 
     .pageLinks {
-        border-color: 2px #478974;
+        position: relative;
+        right: 0;
     }
 
     .pageLinks.active {
@@ -442,7 +483,6 @@ textarea {
 
     .burger-menu {
         position: absolute;
-        top: 10px;
         right: 3vh;
         cursor: pointer;
         z-index: 7;
