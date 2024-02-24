@@ -12,6 +12,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Arimo', sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
 
@@ -40,17 +41,20 @@ body {
     cursor: pointer;
 }
 
+.search-container, #userDropdown, #userDropdown div a {
+    cursor: pointer;
+}
+
 main, #headline {
     margin: 5px;
 }
 
 header {
     position: sticky;
+    top: 0;
     background-color: rgb(48 32 32 / 50%);
     color: white;
     z-index: 5;
-    position: sticky;
-    top: 0;
 }
 
 #headline {
@@ -71,8 +75,10 @@ header {
 #websitesName {
     margin-left: 4vh;
     text-decoration: none;
-    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
     font-size: 1.8rem;
+    color: white;
 }
 
 #navPanel {
@@ -202,6 +208,7 @@ header {
 #ontoCarousel h1 {
     text-transform: uppercase;
     font-size: 2.5rem;
+    font-weight: 800;
 }
 
 .someButtonsStyles {
@@ -214,6 +221,7 @@ header {
     color: white;
     background-color: #478974;
     transition: all 0.45s ease-in-out;
+    font-family: 'Arimo', sans-serif;
 }
 
 .someButtonsStyles:hover {
@@ -232,12 +240,12 @@ header {
     font-size: 1.5rem;
 }
 
-#productsContainer {
+#productsContainer, #allProductsContainer {
     display: flex;
     flex-direction: column;
 }
 
-#productsContainer h1 {
+#productsContainer h1, #allProductsContainer h1 {
     border-bottom: solid 1px black;
     padding-bottom: 5px;
     margin: 5vh;
@@ -263,12 +271,12 @@ header {
     right: 1%;
 }
 
-#productsSlides {
+#productsSlides, #allProductsList {
     display: flex;
     justify-content: space-evenly;
 }
 
-.productsSlide {
+.productsSlide, .allProductsItem {
     width: calc(100% / 4); /* Assuming 3 products per slide */
     flex-shrink: 0; /* Prevent slides from shrinking when there's extra space */
     padding: 10px;
@@ -276,7 +284,7 @@ header {
     box-sizing: border-box; /* Include padding/border in width calculation */
 }
 
-.productsSlide img {
+.productsSlide img, .allProductsItem img {
     max-width: 80%;
     height: auto; /* Maintain aspect ratio */
 }
@@ -420,8 +428,12 @@ textarea {
     font-size: 20px;
 }
 
+/* products.html */
+
+
+
 /* Media query */
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 790px) {
 
     header {
         bottom: 15vh;

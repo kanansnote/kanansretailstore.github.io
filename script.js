@@ -54,6 +54,7 @@ function setupSearchBar() {
     // Create an SVG element for the 'x'
     var closeIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     closeIcon.setAttribute('viewBox', '0 0 40 40');
+    closeIcon.style.cursor = 'pointer';
     closeIcon.classList.add('close-icon');  // Add a class for styling if needed
 
     // Create the 'x' path
@@ -125,8 +126,10 @@ function productSlider() {
   let currentSlideIndex = 0;
   slideContainer.style.transform = `translateX(0px)`;
 
+  var bothArrows = productsContainer.querySelectorAll('.leftArrow, .rightArrow');
+
   // Optional: Add event listeners for arrow buttons (if present)
-  if (productsContainer.querySelectorAll('.leftArrow, .rightArrow').length > 0) {
+  if (bothArrows.length > 0) {
     const leftArrow = productsContainer.querySelector('.leftArrow');
     const rightArrow = productsContainer.querySelector('.rightArrow');
 
@@ -221,13 +224,13 @@ document.addEventListener('click', function() {
 const burgerMenu = document.querySelector(".burger-menu");
 
 window.onload = function() {
-    if (window.innerWidth <= 775) {
+    if (window.innerWidth <= 790) {
         navPanel.style.display = 'none';
     }
 };
 
 burgerMenu.addEventListener("click", () => {
-    if (window.innerWidth <= 775) {
+    if (window.innerWidth < 790) {
         navPanel.style.display = navPanel.style.display === "none" ? "flex" : "none";
         navPanel.style.justifyContent = 'center';
     }
@@ -238,7 +241,7 @@ burgerMenu.addEventListener("click", () => {
 });
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth >= 775) {
+    if (window.innerWidth > 790) {
         navPanel.style.display = 'flex';
     } else {
         navPanel.style.display = 'none';
@@ -258,3 +261,17 @@ dropLine.addEventListener('click', function() {
 
     }
 });
+
+// Make headline id element disappear when scrolling down
+window.onscroll = function() {
+  const scrollPosition = window.scrollY;
+
+  // Determine desired scroll threshold (e.g., 50px):
+  const threshold = 0;
+
+  if (scrollPosition > threshold) {
+    headline.style.display = 'none'; // Adjust top position as needed
+  } else {
+    headline.style.display = 'block';
+  }
+};
