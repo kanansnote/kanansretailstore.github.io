@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create an Account</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link rel="favicon" href="./src/media/icons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
+
 <body>
-<header>
-  <span id="headline">Enjoy complimentary standard shipping on all orders.</span>
-  <div class="flexProperty">
-    <a id="websitesName" href="index.html">Retail Store</a>
-    <div class="burger-menu">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav id="navPanel">
-      <ul>
-        <li><a class="pageLinks navPanelElements" href="index.html">Home</a></li>
-        <li><a class="pageLinks navPanelElements" href="about.html">About</a></li>
-        <li><span id="pageAndIconsPipe" class="navPanelElements">|</span></li>
-        <li><div class="search-container navPanelElements"><img class="headerIcons" src="media/icons/search.svg"/></div></li>
-        <li><a class="navPanelElements" href="cart.html"><img class="headerIcons" src="media/icons/cart.svg"/></a></li>
-        <li><div id="userDropdown" class="navPanelElements"><img class="headerIcons" src="media/icons/person.svg"/></div></li>
-        <li><button id="darkModeToggle" class="navPanelElements"><img id="bothModeIcons" class="headerIcons" src="media/icons/sunny.svg"/></button></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main>
-  <div id="createAccount">
-    <h1>Create an Account</h1>
-    <p>By creating an account, you may receive newsletters or promotions.</p>
-    <input type="text" placeholder="First Name"><br>
-    <input type="text" placeholder="Last Name"><br>
-    <input type="text" placeholder="Email"><br>
-    <input type="text" placeholder="Phone (Optional)"><br>
-    <button class="someButtonsStyles">Create Account</button>
-    <p>Already have an account? Sign in</p>
-  </div>
-</main>
-<footer>
-  <div id="copyright"></div>
-</footer>
-<script src="script.js"></script>
+    <header>
+        <span id="headline">Enjoy complimentary standard shipping on all orders.</span>
+        <div class="flexProperty">
+            <a id="websitesName" href="index.html">Kanan's Store</a>
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav id="navBar">
+                <ul>
+                    <li><a class="pageLinks navBarElements" href="index.html">Home</a></li>
+                    <li><a class="pageLinks navBarElements" href="about.html">About</a></li>
+                    <li><span id="pageAndIconsPipe" class="navBarElements">|</span></li>
+                    <li>
+                        <div class="search-container navBarElements"><img class="headerIcons"
+                                src="./src/media/icons/search.svg" alt="Search Icon" />
+                        </div>
+                    </li>
+                    <li><a class="navBarElements" href="cart.html"><img class="headerIcons"
+                                src="./src/media/icons/cart.svg" alt="Cart Icon" />
+                        </a>
+                    </li>
+                    <li>
+                        <div id="userDropdown" class="navBarElements"><img class="headerIcons"
+                                src="./src/media/icons/person.svg" alt="User Icon" />
+                        </div>
+                    </li>
+                    <li><button id="darkModeToggle" class="navBarElements"><img id="bothModeIcons" class="headerIcons"
+                                src="./src/media/icons/sunny.svg" alt="Sun Icon" />
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="createAccount">
+            <h1>Create an Account</h1>
+            <p>By creating an account, you may receive newsletters or promotions.</p>
+            <input type="text" placeholder="First Name"><br>
+            <input type="text" placeholder="Last Name"><br>
+            <input type="text" placeholder="Email"><br>
+            <input type="text" placeholder="Phone (Optional)"><br>
+            <button class="someButtonsStyles">Create Account</button>
+            <p>Already have an account? Sign in</p>
+        </div>
+    </main>
+    <footer>
+        <div id="copyright"></div>
+    </footer>
+    <script src="./src/js/script.js"></script>
 </body>
+
 </html>

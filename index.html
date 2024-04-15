@@ -1,98 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="favicon" href="./src/media/icons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+
 <body>
-<header>
-  <span id="headline">Enjoy complimentary standard shipping on all orders.</span>
-  <div class="flexProperty">
-    <a id="websitesName" href="index.html">Retail Store</a>
-    <div class="burger-menu">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav id="navPanel">
-      <ul>
-        <li><a class="pageLinks navPanelElements" href="index.html">Home</a></li>
-        <li><a class="pageLinks navPanelElements" href="about.html">About</a></li>
-        <li><span id="pageAndIconsPipe" class="navPanelElements">|</span></li>
-        <li><div class="search-container navPanelElements"><img class="headerIcons" src="media/icons/search.svg"/></div></li>
-        <li><a class="navPanelElements" href="cart.html"><img class="headerIcons" src="media/icons/cart.svg"/></a></li>
-        <li><div id="userDropdown" class="navPanelElements"><img class="headerIcons" src="media/icons/person.svg"/></div></li>
-        <li><button id="darkModeToggle" class="navPanelElements"><img id="bothModeIcons" class="headerIcons" src="media/icons/sunny.svg"/></button></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main>
-  <div id="bannerPart">
-    <div id="videoCarousel">
-      <video class="video-slide" src="media/videos/pexels-kindel-media-6994619 (1080p).mp4" autoplay muted loop></video>
-      <video class="video-slide" src="media/videos/pexels-kindel-media-6994624 (1080p).mp4" autoplay muted loop></video>
-    </div>
-    <div id="ontoCarousel">
-      <span></span>
-      <h1 class="ontoCarouselsBox">Welcome!</h1>
-      <p class="ontoCarouselsBox">Now taking online orders.</p>
-      <p class="ontoCarouselsBox">Order today and get 20-40% off your first order.</p>
-      <button class="ontoCarouselsBox someButtonsStyles">Shop Now</button>
-    </div>
-  </div>
-  <div id="productsContainer">
-    <h1>Featured Products</h1>
-    <button class="leftArrow"><</button>
-    <button class="rightArrow">></button>
-    <div id="productsSlides">
-      <div class="productsSlide">
-        <img src="products/books & reading/Anatomy & Physiology For Dummies/81knlKRBBvL.jpg" alt="Product 1">
-        <h3>Product 1 Title</h3>
-        <p>Product 1 Description</p>
-        <p class="productsPrice"><span>$30.00</span>$20.00</p>
-      </div>
-      <div class="productsSlide">
-        <img src="products/books & reading/Atomic Habits/81wgcld4wxL.jpg" alt="Product 2">
-        <h3>Product 2 Title</h3>
-        <p>Product 2 Description</p>
-        <p class="productsPrice"><span>$30.00</span>$20.00</p>
-      </div>
-      <div class="productsSlide">
-        <img src="products/books & reading/How Are You Really/71x7JbVEYDL.jpg" alt="Product 3">
-        <h3>Product 3 Title</h3>
-        <p>Product 3 Description</p>
-        <p class="productsPrice"><span>$30.00</span>$20.00</p>
-      </div>
-      <div class="productsSlide">
-        <img src="products/books & reading/The Body Keeps the Score/61NdJMwAThS.jpg" alt="Product 4">
-        <h3>Product 4 Title</h3>
-        <p>Product 4 Description</p>
-        <p class="productsPrice"><span>$30.00</span>$20.00</p>
-      </div>
-    </div>
-    <a id="allProductsLink" href="products.html">View All Products ></a>
-  </div>
-</main>
-<footer>
-  <h1>Questions or Concerns?</h1>
-  <p>Need help selecting a product or finding a sustainable option? Send us a message!</p>
-  <button id="dropLine" class="someButtonsStyles">Drop us a line!</button>
-  <form class="contactSubmitForm">
-    <input name="name" type="text" class="feedback-input" placeholder="Name"/>
-    <input name="email" type="text" class="feedback-input" placeholder="Email"/>
-    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-    <input type="submit" value="SUBMIT"/>
-  </form>
-  <div id="mailingList">
-    <h1>Join Our Mailing List</h1>
-    <input id="mailingListInput" type="text" placeholder="Email">
-    <button id="mailingListButton" class="someButtonsStyles">Sign Up</button>
-  </div>
-  <div id="copyright"></div>
-</footer>
-<script src="script.js"></script>
+    <header>
+        <span id="headline">Enjoy complimentary standard shipping on all orders.</span>
+        <div class="flexProperty">
+            <a id="websitesName" href="index.html">Kanan's Store</a>
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav id="navBar">
+                <ul>
+                    <li><a class="pageLinks navBarElements" href="index.html">Home</a></li>
+                    <li><a class="pageLinks navBarElements" href="about.html">About</a></li>
+                    <li><span id="pageAndIconsPipe" class="navBarElements">|</span></li>
+                    <li>
+                        <div class="search-container navBarElements"><img class="headerIcons"
+                                src="./src/media/icons/search.svg" alt="Search Icon" />
+                        </div>
+                    </li>
+                    <li><a class="navBarElements" href="cart.html"><img class="headerIcons"
+                                src="./src/media/icons/cart.svg" alt="Cart Icon" />
+                        </a>
+                    </li>
+                    <li>
+                        <div id="userDropdown" class="navBarElements"><img class="headerIcons"
+                                src="./src/media/icons/person.svg" alt="User Icon" />
+                        </div>
+                    </li>
+                    <li><button id="darkModeToggle" class="navBarElements"><img id="bothModeIcons" class="headerIcons"
+                                src="./src/media/icons/sunny.svg" alt="Sun Icon" />
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="BannerPart">
+            <div class="videoCarousel swiper-container">
+                <div class="swiper-wrapper">
+                    <video class="video-slide swiper-slide" src="./src/media/videos/4865902-hd_1366_720_25fps.mp4" autoplay muted loop></video>
+                    <video class="video-slide swiper-slide" src="./src/media/videos/4861111-hd_1366_720_25fps.mp4" autoplay muted loop></video>
+                    <video class="video-slide swiper-slide" src="./src/media/videos/4861118-hd_1366_720_25fps.mp4" autoplay muted loop></video>
+                </div>
+            </div>              
+            <div id="ontoCarousel">
+                <span></span>
+                <h1 class="ontoCarouselsBox">Welcome!</h1>
+                <p class="ontoCarouselsBox">Now taking online orders.</p>
+                <p class="ontoCarouselsBox">Order today and get 20-40% off your first order.</p>
+                <button class="ontoCarouselsBox someButtonsStyles">Shop Now</button>
+            </div>
+        </section>
+        <section class="ProductsContainer swiper-container">
+            <h1>Featured Products</h1>
+            <div class="swiper-button-prev BothSwiperArrows">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="swiper-button-next BothSwiperArrows">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="productsSlides swiper-wrapper">
+                <div class="productsSlide swiper-slide">
+                    <img src="./src/media/pictures/products/books & reading/Anatomy & Physiology For Dummies/81knlKRBBvL.jpg" alt="Product 1">
+                    <h3>Product 1 Title</h3>
+                    <p>Product 1 Description</p>
+                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
+                </div>
+                <div class="productsSlide swiper-slide">
+                    <img src="./src/media/pictures/products/books & reading/Atomic Habits/81wgcld4wxL.jpg" alt="Product 2">
+                    <h3>Product 2 Title</h3>
+                    <p>Product 2 Description</p>
+                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
+                </div>
+                <div class="productsSlide swiper-slide">
+                    <img src="./src/media/pictures/products/books & reading/How Are You Really/71x7JbVEYDL.jpg" alt="Product 3">
+                    <h3>Product 3 Title</h3>
+                    <p>Product 3 Description</p>
+                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
+                </div>
+                <div class="productsSlide swiper-slide">
+                    <img src="./src/media/pictures/products/books & reading/The Body Keeps the Score/61NdJMwAThS.jpg" alt="Product 4">
+                    <h3>Product 4 Title</h3>
+                    <p>Product 4 Description</p>
+                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
+                </div>
+            </div>
+            <a id="allProductsLink" href="products.html">View All Products ></a>
+        </section>
+    </main>
+    <footer>
+        <div id="footerTop">
+            <h1>Questions or Concerns?</h1>
+            <p>Need help selecting a product or finding a sustainable option? Send us a message!</p>
+            <button type="button" id="dropLine" class="someButtonsStyles">Drop us a line!</button>
+        </div>
+        <form class="contactSubmitForm">
+            <input name="name" type="text" class="feedback-input" placeholder="Name" />
+            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+            <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+            <input type="submit" value="SUBMIT" />
+        </form>
+        <div id="mailingList">
+            <h1>Join Our Mailing List</h1>
+            <div id="mailingListInputWithButton">
+                <input id="mailingListInput" type="text" placeholder="Email">
+                <button type="submit" id="mailingListButton" class="someButtonsStyles">Sign Up</button>
+            </div>
+        </div>
+        <div id="copyright"></div>
+    </footer>
+    <script src="./src/js/script.js"></script>
 </body>
+
 </html>
