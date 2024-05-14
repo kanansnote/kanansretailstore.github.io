@@ -1,0 +1,115 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(48 32 32 / 50%);
+    color: white;
+    z-index: 5;
+
+    #headline {
+        display: block;
+        text-align: center;
+        background: #478974;
+        margin: 0;
+        padding: 5px;
+        color: white;
+    }
+    
+    .flexProperty {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #websitesName {
+        margin-left: 4vh;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.8rem;
+        color: white;
+    }
+    
+    #navBar {
+        margin-right: 2vh;
+    }
+    
+    #navBar ul {
+        list-style-type: none;
+        position: relative;
+        bottom: 2px;
+    }
+    
+    #navBar ul li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    
+    .pageLinks, #pageAndIconsPipe {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 4px;
+    }
+    
+    .pageLinks.active {
+        border-bottom: solid 2px;
+    }
+    
+    .search-bar {
+        padding: 10px;
+        margin: 2.8vh -5vh 3vh;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        width: 45vh;
+    }
+    
+    .close-button {
+        padding: 5px;
+        border: none;
+        background: none;
+        position: relative;
+        right: 9px;
+        top: 11px;
+        width: 40px;
+    }
+    
+    .close-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .headerIcons {
+        position: relative;
+        top: 4.5px;
+    }
+    
+    #userDropdown div {
+        display: none;
+        position: absolute;
+        right: 1px;
+        top: 7vh;
+        background-color: #000;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    #userDropdown div a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    #userDropdown div hr {
+        border: none;
+        border-top: 1px solid white;
+        width: 8.75em;
+    }
+    
+    #bothModeIcons {
+        display: none;
+    }
+}

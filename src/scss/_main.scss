@@ -1,0 +1,223 @@
+main {
+
+    /* index.html */
+
+    #BannerPart {
+        height: 28em;
+    }
+    
+    .videoCarousel {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        left: -5px;
+        bottom: 13vh;
+        overflow: hidden;
+    }
+    
+    .video-slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    #ontoCarousel {
+        position: absolute;
+        top: 31%;
+        left: 2%;
+        color: white;
+        z-index: 1;
+    }
+    
+    .ontoCarouselsBox {
+        margin-left: 5vh;
+    }
+    
+    #ontoCarousel span {
+        border: solid 1px;
+        height: 17em;
+        position: absolute;
+        top: -1%;
+    }
+    
+    #ontoCarousel h1 {
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    
+    .someButtonsStyles {
+        cursor: pointer;
+        border: 2px solid #478974;
+        padding: 6px 24px;
+        font-size: 1.15em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: white;
+        background-color: #478974;
+        transition: all 0.45s ease-in-out;
+        font-family: 'Arimo', sans-serif;
+    }
+    
+    .someButtonsStyles:hover {
+        background-color: #F1F2F2;
+        color: #478974;
+    }
+    
+    .someButtonsStyles:active {
+        background-color: #478974;
+        color: white;
+        box-shadow: none;
+        outline: 5px auto #478974;
+    }
+    
+    .BothSwiperArrows {
+        background-color: #F2F3F4;
+        color: #7E7E7E;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        border-radius: 6vh;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    
+        &:hover {
+            background-color: #8358ff;
+            color: white;
+        }
+    
+        &::after {
+            content: "";
+        }
+    }
+    
+    #ontoCarousel p {
+        font-size: 1.5rem;
+    }
+    
+    .ProductsContainer, #allProductsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ProductsContainer h1, #allProductsContainer h1 {
+        border-bottom: solid 1px black;
+        padding-bottom: 5px;
+        margin: 5vh;
+    }
+    
+    .leftArrow, .rightArrow {
+        color: black;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute; /* Position arrows outside the carousel */
+        top: 140%;
+        transform: translateY(-50%); /* Center arrows vertically */
+        z-index: 15;
+    }
+    
+    .leftArrow {
+        left: 1%;
+    }
+    
+    .rightArrow {
+        right: 1%;
+    }
+    
+    .productsSlides, #allProductsList {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .productsSlide, .allProductsItem {
+        width: calc(100% / 4); /* Assuming 3 products per slide */
+        flex-shrink: 0; /* Prevent slides from shrinking when there's extra space */
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box; /* Include padding/border in width calculation */
+    }
+    
+    .productsSlide img, .allProductsItem img {
+        max-width: 80%;
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .productsPrice span {
+        margin-right: 2vh;
+        text-decoration: line-through;
+        color: grey;
+    }
+    
+    #allProductsLink {
+        text-decoration: none;
+        text-align: center;
+        color: #478974;
+        font-size: 1.25rem;
+        margin-top: 1vh;
+    }
+
+    
+    /* about.html */
+    #aboutUs h1 {
+        border-bottom: solid 2px;
+        width: 25%;
+        margin: 3vh 0 0 5vh;
+        padding-top: 1vh;
+    }
+
+    #aboutUs p {
+        font-size: 24px;
+    }
+
+    #aboutUs img {
+        position: relative;
+        bottom: 3vh;
+        right: -5px;
+        float: right;
+        width: 50%;
+        height: 89vh;
+        object-fit: cover;
+    }
+
+    .auSections {
+        margin: 5vh;
+    }
+
+    #auSection3 p {
+        margin-bottom: unset;
+    }
+
+    /* createaccount.html */
+
+    #createAccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #createAccount h1 {
+        border-bottom: 1px solid white;
+        justify-content: unset;
+    }
+
+    #createAccount input {
+        background: none;
+        padding: 15px;
+        width: 500px;
+        border: 1px solid white;
+    }
+
+    #createAccount p {
+        font-size: 20px;
+    }
+
+    /* products.html */
+
+
+}

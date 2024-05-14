@@ -30,7 +30,7 @@ darkModeToggle.addEventListener('click', function() {
 const updateYear = new Date().getFullYear();
 const copyrightElement = document.getElementById("copyright");
 
-copyrightElement.innerHTML = "© " + updateYear + " Kanan N. All rights reserved.";
+copyrightElement.innerHTML = "© " + updateYear + " kanansnote. All rights reserved.";
 
 // Get the navBar and searchContainer elements
 const navBar = document.querySelector('#navBar');
